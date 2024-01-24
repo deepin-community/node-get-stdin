@@ -1,0 +1,35 @@
+Description: replace ava by jest
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-12-01
+
+--- /dev/null
++++ b/babel.config.json
+@@ -0,0 +1 @@
++{"presets":["@babel/preset-env"],"plugins":["@babel/plugin-transform-runtime"]}
+--- a/test.js
++++ b/test.js
+@@ -1,8 +1,7 @@
+-import {serial as test} from 'ava';
+ import delay from 'delay';
+ import getStdin from '.';
+ 
+-test('get stdin', async t => {
++test('get stdin', async () => {
+ 	process.stdin.isTTY = false;
+ 	const promise = getStdin();
+ 
+@@ -11,10 +10,10 @@
+ 	await delay(1);
+ 	process.stdin.emit('end');
+ 
+-	t.is((await promise).trim(), 'unicorns');
++	expect((await promise).trim()).toBe('unicorns');
+ });
+ 
+-test('get empty string when no stdin', async t => {
++test('get empty string when no stdin', async () => {
+ 	process.stdin.isTTY = true;
+-	t.is(await getStdin(), '');
++	expect(await getStdin()).toBe('');
+ });
