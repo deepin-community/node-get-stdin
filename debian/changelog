@@ -1,5 +1,47 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-get-stdin (8.0.0-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix GitHub regex
+  * Fix filenamemangle
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Yadd <yadd@debian.org>  Sat, 13 Nov 2021 12:10:47 +0100
+
+node-get-stdin (8.0.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove obsolete field Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Apply multi-arch hints. + node-get-stdin: Add Multi-Arch: foreign.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Modernize debian/watch
+  * Use dh-sequence-nodejs
+  * New upstream version 8.0.0
+  * Enable upstream test using jest instead of ava
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 01 Dec 2020 15:58:50 +0100
+
+node-get-stdin (6.0.0-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.0
+  * Bump debhelper compatibility level to 12
+  * Update VCS fields to salsa
+  * Use pkg-js-tools auto install
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * New upstream version 6.0.0
+  * Update copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 07 Mar 2020 12:39:32 +0100
+
+node-get-stdin (5.0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #818786)
+
+ -- Jonathan Ulrich Horn <debian@autoit4you.de>  Thu, 02 Jun 2016 20:19:16 +0200

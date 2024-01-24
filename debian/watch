@@ -1,0 +1,6 @@
+version=4
+opts=\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-get-stdin-$1/ \
+https://github.com/sindresorhus/get-stdin/tags \
+.*?(\d[\d\.]*)@ARCHIVE_EXT@
